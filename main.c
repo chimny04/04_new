@@ -4,10 +4,14 @@
 int main(int argc, char *argv[])
 {
   int a;
-   printf("input seconds: ");
-   scanf("%i", &a);
-   
-   printf("%i seconds - %ih %im %is \n", a, a/3600, a/60, a%60);
+  
+  printf("input a year: ");
+  scanf("%i", &a);
+  
+  if ((a % 4 == 0 && a % 100 != 0) || a % 400 == 0)
+     printf("%i is leap year\n", a);
+  else
+      printf("%i is not leap year\n", a);
   
   system("PAUSE");	
   return 0;
